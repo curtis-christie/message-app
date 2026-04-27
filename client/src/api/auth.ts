@@ -1,5 +1,5 @@
 import { apiRequest } from "./http.ts";
-import type { User } from "../types/user.ts";
+import type { User } from "../types/user";
 
 type AuthResponse = {
   user: User;
