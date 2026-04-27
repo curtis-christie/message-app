@@ -16,6 +16,7 @@ app.use(
     credentials: true,
   }),
 );
+app.use(express.json());
 
 // Routes
 app.get("/api/health", (_req, res) => {
