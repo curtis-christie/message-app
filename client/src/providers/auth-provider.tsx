@@ -53,6 +53,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
     logout: async () => {
       await logoutMutation.mutateAsync();
     },
+    refreshUser: async () => {
+      await queryClient.invalidateQueries({
+        queryKey: ["auth", "me"],
+      });
+    },
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

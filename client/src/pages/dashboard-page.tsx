@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../providers/use-auth";
+import { ProfileEditor } from "./profile-editor";
+import { UserSearch } from "./user-search";
 
 export function DashboardPage() {
   const navigate = useNavigate();
@@ -39,11 +41,12 @@ export function DashboardPage() {
               <p className="text-sm text-slate-400">{user?.bio || "No bio yet."}</p>
             </div>
           </div>
-
-          <p className="mt-6 text-sm text-slate-400">
-            Auth is connected. Next we will build the profile and user search features.
-          </p>
         </section>
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+          <ProfileEditor />
+          <UserSearch />
+        </div>
       </section>
     </main>
   );
