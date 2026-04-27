@@ -28,8 +28,6 @@ app.use(sessionMiddleware);
    ========================================================= */
 
 app.use("/api", apiRoutes);
-app.use(notFound);
-app.use(errorHandler);
 
 /* =========================================================
   Error Handling

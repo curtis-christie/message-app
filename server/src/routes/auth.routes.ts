@@ -41,7 +41,7 @@ authRoutes.post(
     });
 
     if (existingUser) {
-      throw new HttpError(409, "Username is already taken");
+      throw new HttpError(409, "Username is already taken.");
     }
 
     const passwordHash = await hashPassword(password);
