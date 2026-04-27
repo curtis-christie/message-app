@@ -32,4 +32,7 @@ export const env = {
   PORT: getOptionalNumberEnv("PORT", 5000),
   CLIENT_ORIGIN: getRequiredEnv("CLIENT_ORIGIN"),
   DATABASE_URL: getRequiredEnv("DATABASE_URL"),
+  SESSION_SECRET: getRequiredEnv("SESSION_SECRET"),
+  NODE_ENV: process.env.NODE_ENV || "development",
+  IS_PRODUCTION: process.env.NODE_ENV === "production",
 };
