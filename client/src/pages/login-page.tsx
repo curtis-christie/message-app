@@ -1,4 +1,5 @@
-import { type SubmitEvent, useState } from "react";
+import { useState } from "react";
+import type { SubmitEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../providers/use-auth.ts";
