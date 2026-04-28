@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../providers/use-auth";
 import { ProfileEditor } from "./profile-editor";
 import { UserSearch } from "./user-search";
+import { MessageRequestPanels } from "./message-request-panels.tsx";
 
 export function DashboardPage() {
   const navigate = useNavigate();
@@ -46,6 +47,10 @@ export function DashboardPage() {
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <ProfileEditor />
           <UserSearch />
+        </div>
+
+        <div className="mt-8">
+          <MessageRequestPanels />
         </div>
       </section>
     </main>
