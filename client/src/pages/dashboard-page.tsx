@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../providers/use-auth";
 import { ProfileEditor } from "./profile-editor";
 import { UserSearch } from "./user-search";
-import { MessageRequestPanels } from "./message-request-panels.tsx";
+import { MessageRequestPanels } from "./message-request-panels";
 
 export function DashboardPage() {
   const navigate = useNavigate();
