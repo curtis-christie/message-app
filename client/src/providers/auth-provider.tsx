@@ -19,15 +19,23 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   const registerMutation = useMutation({
     mutationFn: registerUser,
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
       queryClient.setQueryData(["auth", "me"], data);
+
+      await queryClient.invalidateQueries({
+        queryKey: ["auth", "me"],
+      });
     },
   });
 
   const loginMutation = useMutation({
     mutationFn: loginUser,
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
       queryClient.setQueryData(["auth", "me"], data);
+
+      await queryClient.invalidateQueries({
+        queryKey: ["auth", "me"],
+      });
     },
   });
 
