@@ -9,7 +9,7 @@ Recommended host:
 Required environment variable:
 
 ```env
-VITE_API_URL=https://your-backend-url.com/api
+VITE_API_URL=/api
 ```
 
 ## Backend
