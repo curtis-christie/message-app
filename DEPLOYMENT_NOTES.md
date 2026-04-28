@@ -21,7 +21,8 @@ Fly.io
 
 Required environment variables:
 
-```PORT=5000
+```env
+PORT=5000
 CLIENT_ORIGIN=https://your-frontend-url.com
 DATABASE_URL="your-hosted-postgres-url"
 SESSION_SECRET="long-random-production-secret"
@@ -32,9 +33,10 @@ NODE_ENV=production
 
 In production, session cookies should use:
 
-```secure: true
-sameSite: "none"
-httpOnly: true
+```ts
+secure: true;
+sameSite: "none";
+httpOnly: true;
 ```
 
 This project already sets those values based on NODE_ENV.

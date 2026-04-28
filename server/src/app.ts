@@ -9,6 +9,10 @@ import { sessionMiddleware } from "./config/session.js";
 
 export const app = express();
 
+if (env.IS_PRODUCTION) {
+  app.set("trust proxy", 1);
+}
+
 /* =========================================================
   Global Middleware
    ========================================================= */

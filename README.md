@@ -47,41 +47,69 @@ message-app-main/
 
 ## Environment Variables
 
-Client
+### Client
+
 Create:
+
+```txt
 client/.env
+```
 
 Example:
+
+```env
 VITE_API_URL=http://localhost:5000/api
+```
 
-Server
+### Server
+
 Create:
+
+```txt
 server/.env
+```
 
 Example:
+
+```env
 PORT=5000
 CLIENT_ORIGIN=http://localhost:5173
 DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/messaging_app?schema=public"
 SESSION_SECRET="replace_this_with_a_long_random_secret"
 NODE_ENV=development
+```
 
 ## Local Development
 
 Install dependencies
+
+```
 cd server
 npm install
+```
 
+```
 cd ../client
 npm install
+```
 
 Run database migration
+
+```
 cd server
 npm run prisma:migrate
+```
 
 Start backend
+
+```
 cd server
 npm run dev
+```
 
 Start frontend
+
+```
 cd client
 npm run dev
+```
